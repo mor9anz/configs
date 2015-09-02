@@ -2,7 +2,7 @@
 
 if [[ $# < 1 ]]
 then
-    echo "arg(s): all or [bash|gdb|vim] "
+    echo "arg(s): all or [bash|gdb|vim|irssi] "
     exit
 fi
 
@@ -11,6 +11,7 @@ ALL=false
 BASH=false
 GDB=false
 VIM=false
+IRSSI=false
 
 for arg in $@
 do
@@ -23,11 +24,15 @@ do
     elif [[ $arg == "vim" ]]
     then
         VIM=true
+    elif [[ $arg == "irssi" ]]
+    then
+        IRSSI=true
     elif [[ $arg == "all" ]]
     then
         BASH=true
         GDB=true
         VIM=true
+        IRSSI=true
     fi
 done
 
@@ -61,4 +66,11 @@ then
     cd ~/.vim/bundle
     git clone git://github.com/tpope/vim-surround.git
     cd $CWD
+fi
+
+##irssi
+if [[ $IRSSI == true ]]
+then
+    echo "irssi..."
+    cp -rp irssi/.irssi ~/
 fi
