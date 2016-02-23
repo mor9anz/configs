@@ -42,6 +42,16 @@ then
     echo "appending bashrc..installing fortune and cowsay.."
     sudo apt-get install fortune-mod cowsay
     cat bash/.bashrc  >>  ~/.bashrc
+    echo "map cap lock to escape.."
+    cp bash/.remapcaplock ~/
+    if [[ -e ~/.bash_profile ]]
+    then
+        cat bash/.bash_profile  >>  ~/.bash_profile
+    elif [[ -e ~/.profile ]]
+    then
+        cat bash/.bash_profile  >>  ~/.profile
+    fi
+    cd ; xmodmap ~/.remapcaplock
 fi
 
 ##gdb
