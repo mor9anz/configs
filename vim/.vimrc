@@ -22,6 +22,7 @@ iabbrev pirnt print
 iabbrev publci public
 iabbrev pulbic public
 
+set ls=2
 
 "c
 iab cmain #include <stdio.h>
