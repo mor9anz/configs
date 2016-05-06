@@ -1,5 +1,5 @@
 # Source all settings from the peda dir
-source ~/Copy/peda/peda.py
+source ~/MEGA/Copy/peda/peda.py
 
 # These are other settings I have found useful
 
