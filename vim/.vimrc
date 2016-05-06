@@ -22,6 +22,11 @@ iabbrev pirnt print
 iabbrev publci public
 iabbrev pulbic public
 
+"tabs
+ca tn tabnew
+map <C-Left> <Esc>:tabprev<CR>
+map <C-Right> <Esc>:tabnext<CR>
+
 set ls=2
 
 "c
