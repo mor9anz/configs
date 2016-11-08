@@ -13,3 +13,4 @@ index_color=$[RANDOM%len_color]
 index_color2=$[(RANDOM+1)%len_color]
 (tput setaf ${color[$index_color]} && fortune && tput setaf ${color[$index_color2]} )| cowthink -y -f ${cowfile[$index]} ;tput sgr0 
 alias objdump='objdump -M intel'
+xset r rate 200 75

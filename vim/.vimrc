@@ -24,10 +24,10 @@ iabbrev pulbic public
 
 "tabs; not sure why imap is still needed
 ca tn tabnew
-map <C-Left> <Esc>:tabprev<CR>
-map <C-Right> <Esc>:tabnext<CR>
-imap <C-Left> <Esc>:tabprev<CR>
-imap <C-Right> <Esc>:tabnext<CR>
+map <F2> <Esc>:tabprev<CR>
+map <F3> <Esc>:tabnext<CR>
+imap <F2> <Esc>:tabprev<CR>
+imap <F3> <Esc>:tabnext<CR>
 
 set ls=2
 
