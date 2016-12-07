@@ -1,3 +1,9 @@
+# don't put duplicate lines or lines starting with space in the history.
+#HISTCONTROL=ignoreboth #same as ignorespace:ignoredups
+HISTCONTROL=ignoredups #same as ignorespace:ignoredups
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=10000
+HISTFILESIZE=20000
 declare -a cowfile=('apt' 'beavis.zen' 'bong' 'bud-frogs' 'bunny' 'calvin' 'cheese' 'cock' 'cower' 'daemon' 'default
 dragon' 'dragon-and-cow' 'duck' 'elephant' 'elephant-in-snake' 'eyes' 'flaming-sheep
 ghostbusters' 'gnu' 'head-in' 'hellokitty' 'kiss' 'kitty' 'koala' 'kosh' 'luke-koala
