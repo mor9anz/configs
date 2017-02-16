@@ -20,10 +20,10 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-0,20,40 * * * * /home/doalpha/test
+#0,20,40 * * * * /home/doalpha/test
 #0,15,30,45 * * * * /home/doalpha/poke.sh
 #0 */2 * * * /home/doalpha/test
 #0 */12 * * * cd /home/doalpha/msgpushing/unnamed && /usr/local/bin/scrapy crawl 1p3a
 #0 9,21 * * * cd /home/doalpha/msgpushing/unnamed && /usr/local/bin/scrapy crawl hn
-0 0 * * * cd /home/doalpha/msgpushing/unnamed && /usr/local/bin/scrapy crawl 1p3a
-0 0 * * * cd /home/doalpha/msgpushing/unnamed && /usr/local/bin/scrapy crawl hn
+0 4 * * * cd /home/doalpha/msgpushing/unnamed && /home/doalpha/.local/bin/scrapy crawl hn
+0 4 * * * cd /home/doalpha/msgpushing/unnamed && /home/doalpha/.local/bin/scrapy crawl 1p3a
