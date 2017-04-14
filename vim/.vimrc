@@ -30,6 +30,7 @@ imap <F2> <Esc>:tabprev<CR>
 imap <F3> <Esc>:tabnext<CR>
 
 set ls=2
+map q: :q
 
 "c
 iab cmain #include <stdio.h>
