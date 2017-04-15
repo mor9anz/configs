@@ -1,6 +1,6 @@
-# don't put duplicate lines or lines starting with space in the history.
+# don't put duplicate lines in the history. Lines starting with space are kept
 #HISTCONTROL=ignoreboth #same as ignorespace:ignoredups
-HISTCONTROL=ignoredups #same as ignorespace:ignoredups
+HISTCONTROL=ignoredups
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=20000
@@ -20,3 +20,7 @@ index_color2=$[(RANDOM+1)%len_color]
 (tput setaf ${color[$index_color]} && fortune && tput setaf ${color[$index_color2]} )| cowthink -y -f ${cowfile[$index]} ;tput sgr0 
 alias objdump='objdump -M intel'
 xset r rate 200 75
+
+#Typing C-s searches forward through the history
+#http://stackoverflow.com/a/791800
+stty -ixon
