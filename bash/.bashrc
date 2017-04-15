@@ -1,3 +1,11 @@
+#ctrl_z to fg
+function overwrite_ctrl_z_fg {
+    stty susp undef
+    bind '"\C-z":"fg\015"'
+}
+function overwrite_ctrl_z_fg_undo {
+    stty susp ^z
+}
 # don't put duplicate lines in the history. Lines starting with space are kept
 #HISTCONTROL=ignoreboth #same as ignorespace:ignoredups
 HISTCONTROL=ignoredups
