@@ -1,11 +1,3 @@
-#ctrl_z to fg
-function overwrite_ctrl_z_fg {
-    stty susp undef
-    bind '"\C-z":"fg\015"'
-}
-function overwrite_ctrl_z_fg_undo {
-    stty susp ^z
-}
 # don't put duplicate lines in the history. Lines starting with space are kept
 #HISTCONTROL=ignoreboth #same as ignorespace:ignoredups
 HISTCONTROL=ignoredups
@@ -32,3 +24,21 @@ xset r rate 200 75
 #Typing C-s searches forward through the history
 #http://stackoverflow.com/a/791800
 stty -ixon
+
+############functions
+#ctrl_z to fg
+function overwrite_ctrl_z_fg {
+    stty susp undef
+    bind '"\C-z":"fg\015"'
+}
+function overwrite_ctrl_z_fg_undo {
+    stty susp ^z
+}
+
+############customized tab completion
+#base64
+function _complete_base64 { 
+    _longopt
+    COMPREPLY+=( "| tr -d \"\n\" && echo" )
+}
+complete -F _complete_base64 base64
