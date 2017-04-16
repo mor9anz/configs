@@ -269,7 +269,7 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "'' "; user_name = "morgan"; nick = "morgan"; };
+  core = { real_name = "'' "; user_name = "morganz"; nick = "morganz"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { autolog = "yes"; };
 };
