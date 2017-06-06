@@ -34,8 +34,8 @@ map q: :q
 
 "leader
 let mapleader = "\<Space>"
-noremap <leader>j gt
-noremap <leader>k gT
+noremap <leader>; gt
+noremap <leader>j gT
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -44,8 +44,10 @@ noremap <leader>5 5gt
 noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader><Space> :tablast<cr>
+"noremap <leader>9 9gt
+noremap <leader>9 :tablast<cr>
+noremap <leader><Space> gt
+"noremap <leader><Space> :tablast<cr>
 
 "c
 iab cmain #include <stdio.h>
