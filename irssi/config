@@ -280,6 +280,8 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#radare" ); },
   { level = "JOINS PARTS QUITS"; channels = ( "#0ctf2016" ); },
   { level = "JOINS PARTS QUITS NICKS"; channels = ( "#pctf" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#uiuctf" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#0x4f" ); },
   {
     level = "JOINS PARTS QUITS NICKS";
     channels = ( "##ctfcompetition" );
