@@ -13,6 +13,9 @@ args can be any combinations from "all","bash", "gdb", "vim"
 ## tmux
     cp tmux/.tmux.conf ~/
 
+## irssi
+    cp irssi/config ~/.irssi/config
+
 ## ssh
     /etc/ssh/ssh_config
     ChallengeResponseAuthentication no
