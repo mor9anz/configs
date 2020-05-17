@@ -42,3 +42,7 @@ function _complete_base64 {
     COMPREPLY+=( "| tr -d \"\n\" && echo" )
 }
 complete -F _complete_base64 base64
+
+#append history immediately
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
