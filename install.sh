@@ -2,16 +2,15 @@
 
 if [[ $# < 1 ]]
 then
-    echo "arg(s): all or [bash|gdb|vim|irssi] "
+    echo "arg(s): bash|gdb|vim|irssi|tmux "
     exit
 fi
 
-CWD=$(pwd)
-ALL=false
 BASH=false
 GDB=false
 VIM=false
 IRSSI=false
+TMUX=false
 
 for arg in $@
 do
@@ -27,12 +26,9 @@ do
     elif [[ $arg == "irssi" ]]
     then
         IRSSI=true
-    elif [[ $arg == "all" ]]
+    elif [[ $arg == "tmux" ]]
     then
-        BASH=true
-        GDB=true
-        VIM=true
-        IRSSI=true
+        TMUX=true
     fi
 done
 
@@ -68,14 +64,6 @@ if [[ $VIM == true ]]
 then
     echo "vimrc..."
     cp vim/.vimrc ~/.vimrc
-    #pathogen https://github.com/tpope/vim-pathogen
-    #echo "vim pathogen"...
-    #mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-    ##vim-surround https://github.com/tpope/vim-surround
-    #echo "vim surround..."
-    #cd ~/.vim/bundle
-    #git clone git://github.com/tpope/vim-surround.git
-    #cd $CWD
 fi
 
 ##irssi
@@ -83,4 +71,11 @@ if [[ $IRSSI == true ]]
 then
     echo "irssi..."
     cp -rp irssi/.irssi ~/
+fi
+
+#tmux
+if [[ $TMUX == true ]]
+then
+    echo ".tmux.conf..."
+    cp tmux/.tmux.conf ~/.tmux.conf
 fi
